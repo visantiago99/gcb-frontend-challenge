@@ -1,0 +1,138 @@
+.App {
+  text-align: center;
+}
+
+.header-container a {
+  text-decoration: none;
+  color: #badc58;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  background-color: transparent;
+  width: 100%;
+  height: 60px;
+  padding: 10px;
+  align-items: center;
+  flex-wrap: nowrap;
+  position: absolute;
+  top: 0;
+  z-index: 999;
+}
+
+.logo-container {
+  color: #badc58;
+  font-weight: bolder;
+}
+
+.links-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-right: 2em;
+}
+
+.links-container button {
+    width: 120px;
+    height: 25px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #badc58;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 2px;
+}
+
+.hero-container {
+  display: flex;
+  margin-top: 2px;
+  justify-content: space-between;
+}
+
+.hero-container img {
+  width: 100%;
+}
+
+.search-container {
+  padding: 25px;
+  margin-left: 5%;
+  margin-top: 5%;
+  font-size: 23px;
+  color: #1d164d;
+}
+
+.search-container input {
+  min-width: 300px;
+  min-height: 30px;
+}
+
+.search-container button {
+  background-color: #badc58;
+  border: none;
+  border-radius: 2px;
+  outline: none;
+  color: #fff;
+  margin-left: 5px;
+  height: 35px;
+  width: 35px;
+}
+
+.recipes-container {
+  background-color: #fafafc;
+  color: #1d164d;
+}
+
+.recipes-grid-container {
+  border: 0px solid white;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-areas: 
+  "know-item know-item"
+  "know-item know-item";
+  grid-gap: 30px;
+  padding: 0px 20px 0px 20px;
+  justify-content: center;
+  background-color: #fafafc;
+}
+
+.recipes-grid-container img {
+  width: 50%;
+}
+
+.know-item {
+  background-color: #ffffff;
+  border-radius: 20px;
+  grid-area: 'know-item';
+  box-shadow: 2px 5px 10px  rgba(0, 0, 0, 0.2);
+  display: flex;
+  margin-top: 30px;
+  justify-content: space-between;
+  min-width: 300px;
+  max-width: 500px;
+}
+
+.know-item button {
+  width: 120px;
+  height: 25px;
+  border: none;
+  outline: none;
+  color: #fff;
+  background: #badc58;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 2px;
+}
+
+.recipe-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  margin: 0 auto;
+}
