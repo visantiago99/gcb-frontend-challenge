@@ -13,11 +13,19 @@ import perfil4 from '../images/perfil4.svg';
 
 export default function BlogCarrousel() {
   return (
-    <Splide
+    <div className="carrousel-container">
+      <div className="carrousel-info">
+        <h3>Read Our Blog</h3>
+        <h4>
+          Far far away, behind the word mountains, far from the countries
+          Vokalia and Consonantia, there live the blind texts.
+        </h4>
+      </div>
+      <Splide
     options={ {
       rewind: true,
-      gap   : '10rem',
-      perPage: 3,
+      gap: '-5rem',
+      perPage: 3.5,
     } }
     >
       <SplideSlide>
@@ -53,5 +61,6 @@ export default function BlogCarrousel() {
         />
       </SplideSlide>
 </Splide>
+    </div>
   )
 }
