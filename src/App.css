@@ -9,10 +9,10 @@
 
 .header-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   background-color: transparent;
   width: 100%;
-  height: 60px;
+  height: 65px;
   padding: 10px;
   align-items: center;
   flex-wrap: nowrap;
@@ -24,22 +24,28 @@
 .logo-container {
   color: #badc58;
   font-weight: bolder;
+  font-size: 32px;
 }
 
 .links-container {
   display: flex;
   justify-content: space-between;
   gap: 12px;
-  margin-right: 2em;
+  align-items: center;
+}
+
+.links-container a {
+  color: #ffffff;
 }
 
 .links-container button {
     width: 120px;
-    height: 25px;
+    height: 40px;
     border: none;
     outline: none;
-    color: #fff;
-    background: #badc58;
+    color:  #badc58;
+    background: #ffffff;
+    font-size: 18px;
     cursor: pointer;
     position: relative;
     z-index: 0;
@@ -48,7 +54,6 @@
 
 .hero-container {
   display: flex;
-  margin-top: 2px;
   justify-content: space-between;
 }
 
@@ -217,4 +222,55 @@
 
 .author-img img {
   margin-bottom: 20px;
+}
+
+.membership-container {
+  display: flex;
+  margin-top: 2px;
+  justify-content: space-between;
+}
+
+.email-container {
+  padding: 100px;
+  margin-left: 5%;
+  margin-top: 5%;
+  font-size: 23px;
+  color: #1d164d;
+}
+
+.email-container input {
+  min-width: 300px;
+  min-height: 30px;
+}
+
+.email-container button {
+  background-color: #badc58;
+  border: none;
+  border-radius: 2px;
+  outline: none;
+  color: #fff;
+  margin-left: 5px;
+  height: 35px;
+  width: 65px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 60px;
+  padding: 10px;
+  align-items: center;
+  flex-wrap: nowrap;
+  bottom: 0;
+  color: #1d164d;
+}
+
+.footer-container a {
+  text-decoration: none;
+  color: #bdbcbc;
+}
+
+.formulary-container {
+  margin-top: 150px;
 }
