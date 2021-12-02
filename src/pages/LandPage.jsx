@@ -20,3 +20,7 @@ export default function LandPage() {
     </div>
   )
 }
+
+window.onbeforeunload = function () {
+  window.scrollTo(0, 0);
+}
