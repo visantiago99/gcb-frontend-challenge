@@ -273,4 +273,16 @@
 
 .formulary-container {
   margin-top: 150px;
+  margin-bottom: 150px;
+}
+
+.formulary-container button {
+  background-color: #badc58;
+  border: none;
+  border-radius: 2px;
+  outline: none;
+  color: #fff;
+  margin-left: 5px;
+  height: 35px;
+  width: 85px;
 }

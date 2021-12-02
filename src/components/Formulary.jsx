@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import { cpf } from 'cpf-cnpj-validator'; 
 
 export default function Formulary() {
   const [formulary, setFormulary] = useState({
@@ -26,7 +27,6 @@ export default function Formulary() {
     fetchCEP()
   }, [formulary.cep])
   
-
   const handleChange = ({target}) => {
     setFormulary({
       ...formulary,
@@ -34,7 +34,27 @@ export default function Formulary() {
     })
   }
 
+  const validateFields = () => {
+    if (formulary.cpf.length !== 11 || !cpf.isValid(formulary.cpf)) {
+      setFormulary({
+        ...formulary,
+        cpf: '',
+      })
+      return false
+    }
+    // if (formulary.name.length === 0) return false
+    // if (formulary.birthdate.length === 0) return false
+    // if (formulary.cpf.length === 0) return false
+    // if (formulary.cep.length === 0) return false
+    // if (formulary.neighborhood.length === 0) return false
+    // if (formulary.city.length === 0) return false
+    // if (formulary.state.length === 0) return false
+    // if (formulary.street.length === 0) return false
+    return true
+  }
+
   const setLocalStorage = () => {
+    if (!validateFields()) return alert('Insert all required fields')
     const userObj = {
       name: formulary.name,
       birthdate: formulary.birthdate,
@@ -68,44 +88,60 @@ export default function Formulary() {
       logradouro: '',
     })
   }
-
+  
   return (
     <div className="formulary-container">
       <form>
-        <label>
-          Fullname
-          <input type="text" name="name" onChange={(e) => handleChange(e)} value={formulary.name} />
-        </label>
-        <label>
-          Birthdate
-          <input type="date" name="birthdate" onChange={(e) => handleChange(e)} value={formulary.birthdate} />
-        </label>
-        <label>
-          CPF
-          <input type="number" name="cpf" onChange={(e) => handleChange(e)} value={formulary.cpf} />
-        </label>
-        <label>
-          CEP
-          <input type="number" name="cep" onChange={(e) => handleChange(e)} maxLength='8' value={formulary.cep} />
-        </label>
-        <label>
-        Neighborhood
-          <input type="text" name="Neighborhood" value={cepData.bairro}  />
-        </label>
-        <label>
-        City
-          <input type="text" name="City" value={cepData.localidade} />
-        </label>
-        <label>
-        State
-          <input type="text" name="State" value={cepData.uf} />
-        </label>
-        <label>
-        Street
-          <input type="text" name="Street" value={cepData.logradouro} />
-        </label>
+        <div className="mb-3">
+          <label className="form-label" for="name">
+            Fullname
+            <input className="form-control" id="name" type="text" name="name" onChange={(e) => handleChange(e)} value={formulary.name} required />
+          </label>
+        </div>
+        <div className="mb-3">
+          <label className="form-label" for="birthdate">
+            Birthdate
+            <input className="form-control" id="birthdate" type="date" name="birthdate" onChange={(e) => handleChange(e)} value={formulary.birthdate} required />
+          </label>
+        </div>
+        <div className="mb-3">
+          <label className="form-label" for="cpf">
+            CPF
+            <input className="form-control" id="cpf" type="text" name="cpf" onChange={(e) => handleChange(e)} value={formulary.cpf} maxLength="11" required />
+          </label>
+        </div>
+        <div className="mb-3">
+          <label className="form-label" for="cep">
+            CEP
+            <input className="form-control" id="cep" type="text" name="cep" onChange={(e) => handleChange(e)} maxLength='8' value={formulary.cep} required />
+          </label>
+        </div>
+        <div className="mb-3">
+          <label className="form-label" for="neighborhood">
+          Neighborhood
+            <input className="form-control" id="neighborhood" type="text" name="neighborhood" value={cepData.bairro} required  />
+          </label>
+        </div>
+        <div className="mb-3">
+          <label className="form-label" for="city">
+          City
+            <input className="form-control" id="city" type="text" name="city" value={cepData.localidade} required />
+          </label>
+        </div>
+        <div className="mb-3">
+          <label className="form-label" for="state">
+          State
+            <input className="form-control" id="state" type="text" name="state" value={cepData.uf} required />
+          </label>
+        </div>
+        <div className="mb-3">
+          <label className="form-label" for="street">
+          Street
+            <input className="form-control" id="street" type="text" name="street" value={cepData.logradouro} required />
+          </label>
+        </div>
       </form>
-      <button type="button" onClick={() => {
+      <button type="submit" onClick={() => {
         setLocalStorage()
         clearForm()
       }}>Register</button>
