@@ -9,9 +9,12 @@ export default function ServiceSection() {
       </div>
       <div className="service-info">
         <h3>
+          <strong>
           The best services ready
           To serve you
+          </strong>
         </h3>
+        <br />
         <h4>
           Far far away, behind the word mountains, far from
           the countries Vokalia and Consonantia, there live the
@@ -25,6 +28,7 @@ export default function ServiceSection() {
           A small river named Duden flows by their place and
           supplies it with the necessary regelialia.
         </h4>
+        <br />
         <button>Know More</button>
       </div>
     </div>

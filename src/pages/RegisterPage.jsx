@@ -6,7 +6,7 @@ import Footer from '../components/Footer';
 export default function RegisterPage() {
   return (
     <div>
-      <Header />
+      <Header register={true} />
       <Formulary />
       <Footer />
     </div>

@@ -5,7 +5,7 @@ export default function RecipesCard({comida, info}) {
     <div className="know-item">
             <img src={comida} alt={info} />
           <div className="recipe-info">
-            <h3>{info}</h3>
+            <h3><strong>{info}</strong></h3>
             <button>See Recipe</button>
           </div>
         </div>

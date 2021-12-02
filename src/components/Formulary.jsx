@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { cpf } from 'cpf-cnpj-validator'; 
+import { Link } from 'react-router-dom';
+import { BsFillArrowLeftCircleFill } from "react-icons/bs";
+import healthyfoods1 from '../images/healthyfood.svg'
 
 export default function Formulary() {
   const [formulary, setFormulary] = useState({
@@ -42,14 +45,9 @@ export default function Formulary() {
       })
       return false
     }
-    // if (formulary.name.length === 0) return false
-    // if (formulary.birthdate.length === 0) return false
-    // if (formulary.cpf.length === 0) return false
-    // if (formulary.cep.length === 0) return false
-    // if (formulary.neighborhood.length === 0) return false
-    // if (formulary.city.length === 0) return false
-    // if (formulary.state.length === 0) return false
-    // if (formulary.street.length === 0) return false
+    if (formulary.name.length === 0) return false
+    if (formulary.birthdate.length === 0) return false
+    if (formulary.cep.length === 0) return false
     return true
   }
 
@@ -90,7 +88,10 @@ export default function Formulary() {
   }
   
   return (
-    <div className="formulary-container">
+    <div className="register-div">
+      <div className="health-img">
+      </div>
+      <div className="formulary-container">
       <form>
         <div className="mb-3">
           <label className="form-label" for="name">
@@ -145,6 +146,9 @@ export default function Formulary() {
         setLocalStorage()
         clearForm()
       }}>Register</button>
+      <br />
+      <Link to="/"><BsFillArrowLeftCircleFill /></Link>
+    </div>
     </div>
   )
 }

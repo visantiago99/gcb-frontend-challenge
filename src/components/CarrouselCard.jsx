@@ -7,7 +7,7 @@ export default function CarrouselCard({image, title, name, authorImg}) {
         <img src={image} alt={title} />
       </div>
       <div>
-        <h3>{title}</h3>
+        <h3><strong>{title}</strong></h3>
       </div>
       <div className="author-img">
         <h4>{name}</h4>

@@ -6,8 +6,10 @@ export default function MemberShipSection() {
     <div className="membership-container">
       <div className="email-container">
         <h1>
-          Join our membership
+          <strong>
+          Join our membership <br />
           to get special offer
+          </strong>
         </h1>
         <input type="text" placeholder="Enter your email address" />
         <button>Join</button>

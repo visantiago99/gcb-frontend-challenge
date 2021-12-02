@@ -1,13 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-export default function Header() {
+export default function Header({home, register}) {
   return (
     <div className="header-container">
       <div className="logo-container">
-        <h3>Healthy Food</h3>
+        <h3><strong>Healthy Food</strong></h3>
       </div>
-      <div className="links-container">
+      <div className={home ? "links-container" : "links-container-formulary"}>
         <div>
           <Link to="/recipes">HEALTHY RECIPES</Link>
         </div>
@@ -17,9 +17,9 @@ export default function Header() {
         <div>
           <Link to="/login">JOIN</Link>
         </div>
-        <div>
+        { register ? null : <div>
           <Link to="/register"><button>REGISTER</button></Link>
-        </div>
+        </div> }
       </div>
     </div>
   )

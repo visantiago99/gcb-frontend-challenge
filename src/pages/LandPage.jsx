@@ -10,7 +10,7 @@ import Footer from '../components/Footer';
 export default function LandPage() {
   return (
     <div>
-      <Header />
+      <Header home={true} />
       <Hero />
       <Recipes />
       <ServiceSection />

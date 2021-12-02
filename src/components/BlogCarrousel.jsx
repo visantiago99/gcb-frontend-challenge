@@ -15,7 +15,7 @@ export default function BlogCarrousel() {
   return (
     <div className="carrousel-container">
       <div className="carrousel-info">
-        <h3>Read Our Blog</h3>
+        <h3><strong>Read Our Blog</strong></h3>
         <h4>
           Far far away, behind the word mountains, far from the countries
           Vokalia and Consonantia, there live the blind texts.
@@ -24,8 +24,7 @@ export default function BlogCarrousel() {
       <Splide
     options={ {
       rewind: true,
-      gap: '-5rem',
-      perPage: 3.5,
+      perPage: 3,
     } }
     >
       <SplideSlide>

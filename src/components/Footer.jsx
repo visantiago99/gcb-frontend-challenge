@@ -5,7 +5,7 @@ export default function Footer() {
   return (
     <div className="footer-container">
       <div className="copyrights">
-        <h4>© Copyrights 2019 Stack. All Rights Reserved</h4>
+        <h6>© Copyrights 2019 Stack. All Rights Reserved</h6>
       </div>
       <div className="links-container">
         <Link to="/policy">Privacy Policy</Link>

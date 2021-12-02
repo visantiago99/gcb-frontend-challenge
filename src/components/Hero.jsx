@@ -6,7 +6,7 @@ export default function Hero() {
   return (
     <div className="hero-container">
       <div className="search-container">
-        <h1>Ready for Trying a new recipe?</h1>
+        <h1><strong>Ready for <br />Trying a new recipe?</strong></h1>
         <input type="text" placeholder="Search healthy recipes" />
         <button><BsSearch /></button>
       </div>

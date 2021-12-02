@@ -9,7 +9,7 @@ export default function Recipes() {
   return (
     <div className="recipes-container">
       <div className="recipes-text">
-        <h1>Our Best Recipes</h1>
+        <h1><strong>Our Best Recipes</strong></h1>
         <h4>Far far away, behind the word mountains, far from the countries</h4>
         <h4>Vokalia and Consonantia, there live the blind texts.</h4>
       </div>
