@@ -69,24 +69,24 @@
   height: 100%;
   margin-bottom: 2rem;
   max-width: 100%;
-  border: 2px solid green;
+  /* border: 2px solid green; */
 }
 
 .hero-img img {
   max-width: 100%;
-  border: 2px solid yellow;
+  /* border: 2px solid yellow; */
 }
 
 .search-container {
   font-size: 1rem;
   color: #1d164d;
-  border: 2px solid red;
+  /* border: 2px solid red; */
   flex-grow: 1;
 }
 
 .search-container h1 {
   font-size: 4rem;
-  border: 2px solid blue;
+  /* border: 2px solid blue; */
   margin-top: 9rem;
 }
 
@@ -166,20 +166,21 @@
 .service-container {
   display: flex;
   align-items: center;
-  border: 2px solid green;
+  /* border: 2px solid green; */
 }
 
 .service-container img {
   max-width: 100%;
-  border: 2px solid red;
+  /* border: 2px solid red; */
 }
 
 .service-info {
-  border: 2px solid blue;
+  /* border: 2px solid blue; */
 }
 
 .service-info h3 {
   color: #1d164d;
+  font-size: 3rem;
 }
 
 .service-info h4 {
@@ -212,7 +213,7 @@
 
 .carrousel-info h3 {
   color: #1d164d;
-  font-size: 32px;
+  font-size: 3rem;
 }
 
 .carrousel-info h4 {
@@ -236,7 +237,7 @@
 
 .crrsl-card h3 {
   color: #1d164d;
-  font-size: 17px;
+  font-size: 1.3rem;
 }
 
 .crrsl-card h4 {
@@ -253,11 +254,11 @@
   margin-top: 2px;
   justify-content: space-between;
   max-width: 100%;
-  border: 2px solid red;
+  /* border: 2px solid red; */
 }
 
 .membership-img {
-  border: 2px solid green;
+  /* border: 2px solid green; */
 }
 
 .membership-img img {
@@ -265,14 +266,15 @@
 }
 
 .email-container {
-  border: 2px solid blue;
+  /* border: 2px solid blue; */
   color: #1d164d;
   flex-grow: 1;
 }
 
 .email-container h1 {
-  border: 2px solid yellow;
+  /* border: 2px solid yellow; */
   margin-top: 10rem;
+  font-size: 3rem;
 }
 
 .email-container button {
@@ -304,21 +306,23 @@
 }
 
 .register-div {
+  border: 2px solid red;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   border-radius: 6px;
   gap: 10em;
   width: 80%;
+  min-width: 700px;
   background-color: #fafafc;
   box-shadow: 2px 5px 10px  rgba(0, 0, 0, 0.2);
-  margin: 150px auto 50px auto;
+  margin: 0 auto;
+  margin-top: 10%;
 }
 
 .formulary-container {
-  margin-left: 35px;
-  margin-bottom: 20px;
-  margin-top: 20px;
+  border: 2px solid blue;
+  margin-right: 10%;
 }
 
 .formulary-container button {
@@ -338,11 +342,30 @@
 }
 
 .health-img {
+  border: 2px solid yellow;
   background-image: url('./images/healthyfood.svg');
   background-repeat: no-repeat;
   background-size: cover;
-  width: 900px;
+  width: 80%;
   border-radius: 6px;
+}
+
+@media (max-width: 1250px) {
+  .health-img {
+    display: none;
+  }
+
+  .register-div {
+    width: 30%;
+    background-color: #fafafc;
+    box-shadow: 2px 5px 10px  rgba(0, 0, 0, 0.2);
+    margin: 0 auto;
+    margin-top: 5%;
+  }
+
+  .formulary-container {
+    margin-left: 20%;
+  }
 }
 
 @media (max-width: 1100px) {
@@ -359,6 +382,17 @@
   .search-container button {
     height: 30px;
     width: 40px;
+  }
+}
+
+@media (max-width: 880px) {
+  .header-container {
+    display: none;
+  }
+
+  .formulary-container {
+    border: 2px solid blue;
+    margin: 0 auto;
   }
 }
 
@@ -379,10 +413,7 @@
   }
 }
 
-@media screen and (min-width: 360px) and (max-width: 719px) {
-  .header-container {
-    display: none;
-  }
+@media screen and (min-width: 360px) and (max-width: 880px) {
   
   .hero-container {
     flex-direction: column-reverse;

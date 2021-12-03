@@ -17,16 +17,22 @@ export default function BlogCarrousel() {
 
   const watchScreen = () => {
     const screenSize = window.innerWidth;
-    if (screenSize < 1040 && screenSize > 815) {
-      return setGap('15rem')
+    if (screenSize > 1450) {
+      setGap('-15rem')
+      setPerPage(3)
     }
-    if (screenSize < 815 && screenSize > 720) {
-      return setGap('30rem')
+    else if (screenSize < 1450 && screenSize > 1000) {
+      setGap('5rem')
+      setPerPage(3)
     }
-    if (screenSize < 720) {
-      return setPerPage(1) && setGap('0rem')
+    else if (screenSize < 1000 && screenSize > 780) {
+      setGap('-5rem')
+      setPerPage(2)
     }
-    return setGap('0rem') && setPerPage(3)
+      else {
+      setPerPage(1)
+      setGap('0rem')
+    } 
   };
 
   useEffect(() => {
