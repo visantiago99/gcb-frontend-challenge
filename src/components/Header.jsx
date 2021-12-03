@@ -5,7 +5,7 @@ export default function Header({home, register}) {
   return (
     <div className="header-container">
       <div className="logo-container">
-        <h3><strong>Healthy Food</strong></h3>
+        <Link to="/"><h3><strong>Healthy Food</strong></h3></Link>
       </div>
       <div className={home ? "links-container" : "links-container-formulary"}>
         <div>

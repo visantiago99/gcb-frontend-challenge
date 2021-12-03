@@ -3,7 +3,7 @@ import axios from 'axios';
 import { cpf } from 'cpf-cnpj-validator'; 
 import { Link } from 'react-router-dom';
 import { BsFillArrowLeftCircleFill } from "react-icons/bs";
-import healthyfoods1 from '../images/healthyfood.svg'
+import { useCookies } from 'react-cookie';
 
 export default function Formulary() {
   const [formulary, setFormulary] = useState({
@@ -12,7 +12,14 @@ export default function Formulary() {
     cpf: '',
     cep: '',
   })
+
   const [cepData, setCepData] = useState('');
+
+  const [cookies, setCookie] = useCookies([`${formulary.name}`])
+
+  const setCookies = (obj) => {
+    setCookie(`${formulary.name}`, JSON.stringify(obj), { path: '/register' })
+  }
 
   const fetchCEP = async (cep) => {
     try {
@@ -67,6 +74,7 @@ export default function Formulary() {
       localStorage.setItem('userList', JSON.stringify([userObj]))
       return 
     }
+    setCookies(userObj)
     const localObj = JSON.parse(localStorage.getItem('userList'))
     let result = [...localObj, userObj]
     localStorage.setItem('userList', JSON.stringify(result))

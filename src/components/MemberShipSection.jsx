@@ -14,7 +14,7 @@ export default function MemberShipSection() {
         <input type="text" placeholder="Enter your email address" />
         <button>Join</button>
       </div>
-      <div>
+      <div className="membership-img">
         <img src={bloco_final_image} alt="bloco_final_image" />
       </div>
     </div>

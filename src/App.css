@@ -65,23 +65,33 @@
 .hero-container {
   display: flex;
   justify-content: space-between;
+  height: 100vh;
+  margin-bottom: 2rem;
+  max-width: 100%;
+  border: 2px solid green;
+}
+
+.hero-img {
+  background-image: url('./images/Illustration.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 70rem;
+  border: 2px solid yellow;
 }
 
 .search-container {
-  padding: 120px;
-  margin-left: 20%;
   margin-top: 5%;
-  font-size: 23px;
+  font-size: 1rem;
   color: #1d164d;
+  border: 2px solid red;
+  flex-grow: 1;
 }
 
 .search-container h1 {
-  font-size: 62px;
-}
-
-.search-container input {
-  min-width: 300px;
-  min-height: 30px;
+  font-size: 4rem;
+  margin-left: 1rem;
+  border: 2px solid blue;
+  margin-top: 19rem;
 }
 
 .search-container button {
@@ -160,11 +170,20 @@
 .service-container {
   display: flex;
   align-items: center;
+  border: 2px solid green;
+}
+
+.service-container img {
+  max-width: 100%;
+  border: 2px solid red;
+}
+
+.service-info {
+  border: 2px solid blue;
 }
 
 .service-info h3 {
   color: #1d164d;
-  font-size: 36px;
 }
 
 .service-info h4 {
@@ -237,23 +256,27 @@
   display: flex;
   margin-top: 2px;
   justify-content: space-between;
+  max-width: 100%;
+  border: 2px solid red;
 }
 
-.membership-container img {
-  width: 800px;
+.membership-img {
+  border: 2px solid green;
+}
+
+.membership-img img {
+  width: 100%;
 }
 
 .email-container {
-  padding: 100px;
-  margin-left: 15%;
-  margin-top: 5%;
-  font-size: 23px;
+  border: 2px solid blue;
   color: #1d164d;
+  flex-grow: 1;
 }
 
-.email-container input {
-  min-width: 300px;
-  min-height: 30px;
+.email-container h1 {
+  border: 2px solid yellow;
+  margin-top: 10rem;
 }
 
 .email-container button {
@@ -324,4 +347,21 @@
   background-size: cover;
   width: 900px;
   border-radius: 6px;
+}
+
+@media (max-width: 720px) {
+  .recipes-grid-container {
+    border: 0px solid white;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-areas: 
+    "know-item"
+    "know-item"
+    "know-item"
+    "know-item";
+    padding: 0px 20px 0px 20px;
+    justify-content: center;
+    background-color: #fafafc;
+  }
 }
