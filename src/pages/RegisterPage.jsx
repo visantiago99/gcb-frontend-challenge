@@ -8,7 +8,6 @@ export default function RegisterPage() {
     <div>
       <Header register={true} />
       <Formulary />
-      <Footer />
     </div>
   )
 }

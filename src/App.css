@@ -306,7 +306,6 @@
 }
 
 .register-div {
-  border: 2px solid red;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -321,7 +320,6 @@
 }
 
 .formulary-container {
-  border: 2px solid blue;
   margin-right: 10%;
 }
 
@@ -386,13 +384,13 @@
 }
 
 @media (max-width: 880px) {
-  .header-container {
-    display: none;
+  .register-div {
+    margin-top: 4rem;
   }
 
   .formulary-container {
-    border: 2px solid blue;
     margin: 0 auto;
+    margin-top: 3rem;
   }
 }
 
@@ -411,6 +409,32 @@
     "know-item"
     "know-item";
   }
+}
+
+@media (max-width: 620px) {
+  .formulary-container {
+    width: 80vh;
+    height: 150vh;
+  }
+
+  .register-div {
+    height: 155vh;
+    font-size: 2rem;
+    
+  }
+
+  .formulary-container button {
+    background-color: #badc58;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    color: #fff;
+    margin-left: 5px;
+    height: 65px;
+    min-width: 185px;
+  }
+
+
 }
 
 @media screen and (min-width: 360px) and (max-width: 880px) {
