@@ -65,22 +65,19 @@
 .hero-container {
   display: flex;
   justify-content: space-between;
-  height: 100vh;
+  max-height: 100vh;
+  height: 100%;
   margin-bottom: 2rem;
   max-width: 100%;
   border: 2px solid green;
 }
 
-.hero-img {
-  background-image: url('./images/Illustration.svg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 70rem;
+.hero-img img {
+  max-width: 100%;
   border: 2px solid yellow;
 }
 
 .search-container {
-  margin-top: 5%;
   font-size: 1rem;
   color: #1d164d;
   border: 2px solid red;
@@ -89,9 +86,8 @@
 
 .search-container h1 {
   font-size: 4rem;
-  margin-left: 1rem;
   border: 2px solid blue;
-  margin-top: 19rem;
+  margin-top: 9rem;
 }
 
 .search-container button {
@@ -349,19 +345,36 @@
   border-radius: 6px;
 }
 
+@media (max-width: 1100px) {
+  .search-container {
+    margin-top: 5%;
+    width: 50%;
+  }
+  
+  .search-container h1 {
+    font-size: 3rem;
+    margin-top: 5rem;
+  }
+  
+  .search-container button {
+    height: 30px;
+    width: 40px;
+  }
+}
+
+@media (max-width: 799px) {
+  .search-container h1 {
+    font-size: 2rem;
+    margin-top: 5rem;
+  }
+}
+
 @media (max-width: 720px) {
   .recipes-grid-container {
-    border: 0px solid white;
-    max-width: 1200px;
-    margin: 0 auto;
-    display: grid;
     grid-template-areas: 
     "know-item"
     "know-item"
     "know-item"
     "know-item";
-    padding: 0px 20px 0px 20px;
-    justify-content: center;
-    background-color: #fafafc;
   }
 }

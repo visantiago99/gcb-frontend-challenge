@@ -23,8 +23,8 @@ export default function Formulary() {
 
   const fetchCEP = async (cep) => {
     try {
-      if (formulary.cep.length === 8) {
-        const fetchData = await axios.get(`https://viacep.com.br/ws/77020468/json/`)
+      if (formulary.cep.length > 7) {
+        const fetchData = await axios.get(`https://viacep.com.br/ws/${cep}/json/`)
         console.log(fetchData)
         return setCepData(fetchData.data)
       }
@@ -34,7 +34,7 @@ export default function Formulary() {
   }
 
   useEffect(() => {
-    fetchCEP()
+    fetchCEP(formulary.cep)
   }, [formulary.cep])
   
   const handleChange = ({target}) => {

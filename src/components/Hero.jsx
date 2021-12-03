@@ -1,5 +1,5 @@
 import React from 'react';
-// import Illustration from '../images/Illustration.svg';
+import Illustration from '../images/Illustration.svg';
 import { BsSearch } from "react-icons/bs";
 
 export default function Hero() {
@@ -11,7 +11,7 @@ export default function Hero() {
         <button><BsSearch /></button>
       </div>
       <div className="hero-img">
-        {/* <img src={Illustration} alt="Illustration" /> */}
+        <img src={Illustration} alt="Illustration" />
       </div>
     </div>
   )

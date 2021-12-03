@@ -1,7 +1,7 @@
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import '@splidejs/splide/dist/css/splide.min.css';
 import CarrouselCard from './CarrouselCard';
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import bloco_image_1 from '../images/bloco_image_1.svg';
 import bloco_image_2 from '../images/bloco_image_2.svg';
 import bloco_image_3 from '../images/bloco_image_3.svg';
@@ -12,6 +12,21 @@ import perfil3 from '../images/perfil3.svg';
 import perfil4 from '../images/perfil4.svg';
 
 export default function BlogCarrousel() {
+  const [screenWidth, setScreenWidth] = useState()
+
+  const watchScreen = () => {
+    const screenSize = window.innerWidth;
+    if (screenSize < 1040 && screenSize > 815) return setScreenWidth('15rem')
+    if (screenSize < 815) return setScreenWidth('30rem')
+    return setScreenWidth('0rem')
+  };
+
+  useEffect(() => {
+    watchScreen()
+    window.addEventListener('resize', watchScreen);
+    return () => window.removeEventListener('resize', watchScreen)
+  }, [screenWidth])
+
   return (
     <div className="carrousel-container">
       <div className="carrousel-info">
@@ -25,6 +40,7 @@ export default function BlogCarrousel() {
     options={ {
       rewind: true,
       perPage: 3,
+      gap: screenWidth,
     } }
     >
       <SplideSlide>
