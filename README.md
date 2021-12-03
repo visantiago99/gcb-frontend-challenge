@@ -1,13 +1,11 @@
 <h1>🍉Healthy Food</h1>
 
-
+![responsive-web](https://user-images.githubusercontent.com/60020689/144662074-3a652d0b-501a-445c-95e1-63461dae3ae4.png)
 
 <p>Neste projeto foi realizado o desenvolvimento de uma web page sobre comidas saudáveis.</p>
 <p>A aplicação consite em uma landing page e uma página para registro de usuários, onde os dados dos mesmos são salvos no LocalStora e nos Cookies.</p>
 
 <h2>🔧 Instruções para rodar a aplicação</h2>
-
-![responsive-web](https://user-images.githubusercontent.com/60020689/144662074-3a652d0b-501a-445c-95e1-63461dae3ae4.png)
 
 1° Clone o repositório a partir de seu terminal:
 ```bash
