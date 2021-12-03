@@ -28,6 +28,10 @@
 * [react-icons](https://react-icons.github.io/react-icons/) - É uma biblioteca com diversos ícones que podem ser utilizados de forma semelhante a componentes no React.
 * [bootstrap](https://getbootstrap.com/) - É uma biblioteca open source de CSS que permite estilizar e customizar elementos de forma responsiva.
 
+<h2>Deploy</h2>
+
+<a href="https://healthyfood-gcb-fontend.netlify.app/">Linkedin</a>
+
 <h2>Contato</h2>
 
 <a href="https://www.linkedin.com/in/victor-santiago-082542144/">Linkedin</a> | <a href="mailto:czpask@gmail.com">Gmail</a>
