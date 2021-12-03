@@ -133,7 +133,7 @@
   margin-bottom: 30px;
   margin-left: 40px;
   justify-content: space-between;
-  min-width: 300px;
+  min-width: 340px;
   max-width: 500px;
 }
 
@@ -377,4 +377,122 @@
     "know-item"
     "know-item";
   }
+}
+
+@media screen and (min-width: 360px) and (max-width: 719px) {
+  .header-container {
+    display: none;
+  }
+  
+  .hero-container {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  
+  .search-container {
+    font-size: 0.8rem;
+  }
+  
+  .search-container h1 {
+    font-size: 2rem;
+    margin-top: 1rem;
+  }
+  
+  .search-container button {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    height: 45px;
+    width: 45px;
+  }
+
+  .know-item {
+    margin-top: 15px;
+    margin-bottom: 30px;
+    margin-left: 5px;
+  }
+  
+  .recipes-text h4 {
+    color: #bdbcbc;
+    font-size: 1rem;
+    padding: 10px;
+  }
+  
+  .service-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .service-info h3 {
+    color: #1d164d;
+    margin-top: 15px;
+  }
+  
+  .service-info h4 {
+    color: #bdbcbc;
+    font-size: 1rem;
+    padding: 10px;
+  }
+  
+  .carrousel-container {
+    -webkit-mask-image: none;
+  }
+  
+  .carrousel-info {
+    margin-top: 30px;
+  }
+  
+  .carrousel-info h3 {
+    color: #1d164d;
+    font-size: 2rem;
+  }
+  
+  .carrousel-info h4 {
+    color: #bdbcbc;
+    margin-bottom: 20px;
+    font-size: 1rem;
+    padding: 10px;
+  }
+  
+  .crrsl-card {
+    margin: 0 auto;
+    width: 245px;
+    height: 350px;
+    margin-bottom: 50px;
+  }
+  
+  .crrsl-card img {
+    max-width: 245px;
+  }
+  
+  .crrsl-card h3 {
+    color: #1d164d;
+    font-size: 1rem;
+  }
+  
+  .crrsl-card h4 {
+    color: #bdbcbc;
+    font-size: 1rem;
+  }
+  
+  .membership-container {
+    flex-direction: column;
+  }
+  
+  .email-container h1 {
+    margin-top: 1rem;
+    margin-bottom: 20px;
+  }
+  
+  .email-container button {
+    margin-left: 10px;
+    height: 35px;
+    margin-bottom: 20px;
+  }
+  
+  .footer-container {
+    padding: 2px;
+    font-size: 0.5rem;
+  }
+  
 }

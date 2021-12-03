@@ -12,20 +12,28 @@ import perfil3 from '../images/perfil3.svg';
 import perfil4 from '../images/perfil4.svg';
 
 export default function BlogCarrousel() {
-  const [screenWidth, setScreenWidth] = useState()
+  const [crrGap, setGap] = useState()
+  const [crrPerPage, setPerPage] = useState()
 
   const watchScreen = () => {
     const screenSize = window.innerWidth;
-    if (screenSize < 1040 && screenSize > 815) return setScreenWidth('15rem')
-    if (screenSize < 815) return setScreenWidth('30rem')
-    return setScreenWidth('0rem')
+    if (screenSize < 1040 && screenSize > 815) {
+      return setGap('15rem')
+    }
+    if (screenSize < 815 && screenSize > 720) {
+      return setGap('30rem')
+    }
+    if (screenSize < 720) {
+      return setPerPage(1) && setGap('0rem')
+    }
+    return setGap('0rem') && setPerPage(3)
   };
 
   useEffect(() => {
     watchScreen()
     window.addEventListener('resize', watchScreen);
     return () => window.removeEventListener('resize', watchScreen)
-  }, [screenWidth])
+  }, [crrGap])
 
   return (
     <div className="carrousel-container">
@@ -39,8 +47,8 @@ export default function BlogCarrousel() {
       <Splide
     options={ {
       rewind: true,
-      perPage: 3,
-      gap: screenWidth,
+      perPage: crrPerPage,
+      gap: crrGap,
     } }
     >
       <SplideSlide>
