@@ -30,7 +30,7 @@
 
 <h2>Deploy</h2>
 
-<a href="https://healthyfood-gcb-fontend.netlify.app/">Linkedin</a>
+<a href="https://healthyfood-gcb-fontend.netlify.app/">Healthy Food Netlify</a>
 
 <h2>Contato</h2>
 
