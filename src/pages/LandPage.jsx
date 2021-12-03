@@ -6,6 +6,7 @@ import ServiceSection from '../components/ServiceSection';
 import BlogCarrousel from '../components/BlogCarrousel';
 import MemberShipSection from '../components/MemberShipSection';
 import Footer from '../components/Footer';
+import PageUp from '../components/PageUp';
 
 export default function LandPage() {
   return (
@@ -16,6 +17,7 @@ export default function LandPage() {
       <ServiceSection />
       <BlogCarrousel />
       <MemberShipSection />
+      <PageUp />
       <Footer />
     </div>
   )
