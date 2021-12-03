@@ -18,6 +18,6 @@
   npm start
 ```
 <h2>🛠️ Bibliotecas / Linguagens</h2>
-[React](https://pt-br.reactjs.org/) - O React é uma biblioteca JavaScript de código aberto com foco em criar interfaces de usuário em páginas web.
-[axios](https://axios-http.com/docs/intro) - Axios é um cliente HTTP baseado-em-promessas para o node. js e para o navegador.
-[react-router-dom](https://v5.reactrouter.com/web/guides/quick-start) - O React Router é uma lib completa para controle de rotas.
+![React](https://pt-br.reactjs.org/) - O React é uma biblioteca JavaScript de código aberto com foco em criar interfaces de usuário em páginas web.
+![axios](https://axios-http.com/docs/intro) - Axios é um cliente HTTP baseado-em-promessas para o node. js e para o navegador.
+![react-router-dom](https://v5.reactrouter.com/web/guides/quick-start) - O React Router é uma lib completa para controle de rotas.
