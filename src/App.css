@@ -288,6 +288,11 @@
   width: 75px;
 }
 
+.scroll-up {
+  color: #1d164d;
+  display: none;
+}
+
 .scroll-up button {
   background-color: #badc58;
   border: none;
@@ -352,7 +357,7 @@
 }
 
 .health-img {
-  border: 2px solid yellow;
+  /* border: 2px solid yellow; */
   background-image: url('./images/healthyfood.svg');
   background-repeat: no-repeat;
   background-size: cover;
@@ -374,7 +379,7 @@
   }
 
   .formulary-container {
-    margin-left: 20%;
+    margin: 0 auto;
   }
 }
 
@@ -446,6 +451,10 @@
     min-width: 185px;
   }
 
+  .scroll-up {
+    color: #1d164d;
+    display: block;
+  }
 
 }
 
