@@ -333,7 +333,7 @@
   background-color: #fafafc;
   box-shadow: 2px 5px 10px  rgba(0, 0, 0, 0.2);
   margin: 0 auto;
-  margin-top: 10%;
+  margin-top: 5%;
 }
 
 .formulary-container {
@@ -437,7 +437,7 @@
   .register-div {
     height: 155vh;
     font-size: 2rem;
-    
+    margin-top: 10%;
   }
 
   .formulary-container button {
